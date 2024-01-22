@@ -1,0 +1,34 @@
+{
+  "name": "ytj-api-client",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "test": "nodemon test.js",
+    "build": "tsc",
+    "clean-generated-types": "node ./scripts/clean-generated-types.js",
+    "generate": "wsdl-tsclient --verbose -o ./src/generated ./resources/https_api_tietopalvelu_ytj_fi_yritystiedot.wsdl && npm run clean-generated-types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rantalainen/ytj-api-client.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/rantalainen/ytj-api-client/issues"
+  },
+  "homepage": "https://github.com/rantalainen/ytj-api-client#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "soap": "^1.0.0",
+    "wsdl-tsclient": "^1.4.0"
+  }
+}
