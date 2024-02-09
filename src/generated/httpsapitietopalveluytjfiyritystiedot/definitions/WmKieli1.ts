@@ -1,2 +1,4 @@
 
-/** wm// HELLO WORLD}
+/** wmKieli */
+export interface WmKieli1 {
+    ytunnus?: string;}

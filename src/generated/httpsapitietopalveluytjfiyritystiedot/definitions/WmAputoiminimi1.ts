@@ -1,5 +1,4 @@
 
 /** wmAputoiminimi */
 export interface WmAputoiminimi1 {
-    ytunnus?: string;
-    /** // HELLO WORLD}
+    ytunnus?: string;}

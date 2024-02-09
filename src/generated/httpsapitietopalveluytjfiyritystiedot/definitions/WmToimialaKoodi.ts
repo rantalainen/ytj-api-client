@@ -1,5 +1,4 @@
 
 /** wmToimialaKoodi */
 export interface WmToimialaKoodi {
-    ytunnus?: string;
-    /** // HELLO WORLD}
+    ytunnus?: string;}

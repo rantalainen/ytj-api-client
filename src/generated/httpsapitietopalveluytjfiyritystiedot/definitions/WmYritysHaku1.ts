@@ -7,5 +7,4 @@ export interface WmYritysHaku1 {
     sanahaku?: string;
     ytunnus?: string;
     /** s:boolean */
-    voimassaolevat?: string;
-    /** // HELLO WORLD}
+    voimassaolevat?: string;}

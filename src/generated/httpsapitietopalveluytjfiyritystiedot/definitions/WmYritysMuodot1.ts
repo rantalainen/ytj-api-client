@@ -1,4 +1,3 @@
 
 /** wmYritysMuodot */
-export interface WmYritysMuodot1 {
-    /** // HELLO WORLD}
+export interface WmYritysMuodot1 {}
