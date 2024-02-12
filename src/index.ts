@@ -43,7 +43,9 @@ export class YtjApiClient {
   /** Creates client for SOAP API endpoints */
   async createSoapClient(): Promise<HttpsApiTietopalveluYtjFiYritystiedotClient> {
     try {
-      const soapClient = await createClientAsync(path.resolve('./resources/https_api_tietopalvelu_ytj_fi_yritystiedot.wsdl'));
+      const soapClient = await createClientAsync(
+        path.resolve(__dirname, '..', 'resources', `https_api_tietopalvelu_ytj_fi_yritystiedot.wsdl`)
+      );
 
       // Add authBody to all function calls - every function needs authBody as argument
       // https://javascript.plainenglish.io/javascript-how-to-intercept-function-and-method-calls-b9fd6507ff02
