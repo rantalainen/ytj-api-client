@@ -1,6 +1,6 @@
 {
   "name": "@rantalainen/ytj-api-client",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   "author": "",
   "license": "MIT",
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "resources/*"
   ],
   "bugs": {
     "url": "https://github.com/rantalainen/ytj-api-client/issues"
