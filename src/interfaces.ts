@@ -1,7 +1,7 @@
 export interface YtjApiClientOptions {
   userId: string;
   apiKey: string;
-  timestamp: string;
+  timestamp?: string;
 
   ticket?: string;
   apiBaseUrl?: string;

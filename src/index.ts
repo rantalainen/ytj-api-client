@@ -3,6 +3,12 @@ import crypto from 'crypto';
 import dayjs from 'dayjs';
 import path from 'path';
 import { HttpsApiTietopalveluYtjFiYritystiedotClient, createClientAsync } from './generated/httpsapitietopalveluytjfiyritystiedot';
+import axios from 'axios';
+import axiosRetry from 'axios-retry';
+
+// Create global axios instance that has retry functionality and longer timeout
+const globalAxiosInstance = axios.create({ timeout: 60000 });
+axiosRetry(globalAxiosInstance, { retries: 3 });
 
 export class YtjApiClient {
   private options: YtjApiClientOptions;
@@ -44,7 +50,8 @@ export class YtjApiClient {
   async createSoapClient(): Promise<HttpsApiTietopalveluYtjFiYritystiedotClient> {
     try {
       const soapClient = await createClientAsync(
-        path.resolve(__dirname, '..', 'resources', `https_api_tietopalvelu_ytj_fi_yritystiedot.wsdl`)
+        path.resolve(__dirname, '..', 'resources', `https_api_tietopalvelu_ytj_fi_yritystiedot.wsdl`),
+        { request: globalAxiosInstance }
       );
 
       // Add authBody to all function calls - every function needs authBody as argument
